@@ -45,6 +45,32 @@ export default function GlobeMap() {
     loadWorldData();
   }, []);
 
+  // Auto-rotation
+  useEffect(() => {
+    let animationFrameId;
+    let lastTime = performance.now();
+
+    const autoRotate = (time) => {
+      const deltaTime = time - lastTime;
+      lastTime = time;
+
+      setRotation(prev => {
+        // Only auto-rotate if we are primarily a globe (progress < 50) and not dragging
+        if (!isDragging && progress[0] < 50) {
+          // Calculate rotation speed (slower as it transforms to map)
+          const speedMultiplier = (50 - progress[0]) / 50;
+          return [(prev[0] + deltaTime * 0.015 * speedMultiplier) % 360, prev[1]];
+        }
+        return prev;
+      });
+
+      animationFrameId = requestAnimationFrame(autoRotate);
+    };
+
+    animationFrameId = requestAnimationFrame(autoRotate);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isDragging, progress]);
+
   const handleMouseDown = (event) => {
     setIsDragging(true);
     const rect = svgRef.current?.getBoundingClientRect();
@@ -231,12 +257,6 @@ export default function GlobeMap() {
         onMouseLeave={handleMouseUp}
       />
       
-      {/* HUD Electronics Overlay */}
-      <div className="globe-hud">
-          <div className="globe-hud-text">SYS.STATE: {progress[0] === 0 ? 'GLOBE' : progress[0] === 100 ? 'MAP' : 'TRANSFORMING'}</div>
-          <div className="globe-hud-text">ROT: {rotation[0].toFixed(1)}° {rotation[1].toFixed(1)}°</div>
-      </div>
-
       <div className="globe-controls">
         <button 
           onClick={handleAnimate} 

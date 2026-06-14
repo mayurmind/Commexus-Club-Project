@@ -185,7 +185,7 @@
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border-left: 1px solid var(--glass-border);
-    z-index: var(--z-overlay);
+    z-index: calc(var(--z-overlay) + 1);
     transition: right var(--transition-base);
   }
 

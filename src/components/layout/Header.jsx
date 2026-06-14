@@ -31,7 +31,7 @@ export default function Header({ onNavigate }) {
           }
         })
       },
-      { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' }
+      { threshold: 0, rootMargin: '-30% 0px -50% 0px' }
     )
 
     navLinks.forEach((link) => {

@@ -1,7 +1,6 @@
 import { Suspense, useState, useEffect, useCallback } from 'react'
 import { Canvas } from '@react-three/fiber'
 import CircuitBoard from './CircuitBoard'
-import ParticleField from './ParticleField'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 
 export default function Scene() {
@@ -66,10 +65,6 @@ export default function Scene() {
           <CircuitBoard
             scrollProgress={scrollProgress}
             mousePosition={mousePos}
-          />
-          <ParticleField
-            count={150}
-            scrollProgress={scrollProgress}
           />
         </Suspense>
       </Canvas>
