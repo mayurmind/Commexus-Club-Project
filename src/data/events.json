@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Arduino Workshop: Build Your First Robot",
+    "date": "2026-06-15",
+    "time": "10:00 AM - 1:00 PM",
+    "location": "Lab 204, RCPIT",
+    "description": "Hands-on workshop where you'll build and program a line-following robot using Arduino Uno. All components provided.",
+    "tag": "Workshop",
+    "status": "upcoming"
+  },
+  {
+    "id": 2,
+    "title": "Embedded C Masterclass",
+    "date": "2026-06-22",
+    "time": "2:00 PM - 5:00 PM",
+    "location": "Seminar Hall, RCPIT",
+    "description": "Deep dive into embedded C programming — from register manipulation to interrupt handling on ATmega328.",
+    "tag": "Masterclass",
+    "status": "upcoming"
+  },
+  {
+    "id": 3,
+    "title": "HackCircuit 2026 — 24hr Hackathon",
+    "date": "2026-07-05",
+    "time": "9:00 AM (24 Hours)",
+    "location": "Main Auditorium, RCPIT",
+    "description": "Our flagship hackathon! Build hardware+software solutions for real-world problems. Prizes worth ₹50,000.",
+    "tag": "Hackathon",
+    "status": "upcoming"
+  },
+  {
+    "id": 4,
+    "title": "IoT & ESP32: Smart Campus Project",
+    "date": "2026-07-20",
+    "time": "11:00 AM - 3:00 PM",
+    "location": "Lab 204, RCPIT",
+    "description": "Learn to build IoT solutions using ESP32 — connect sensors, push data to cloud, and create dashboards.",
+    "tag": "Workshop",
+    "status": "upcoming"
+  },
+  {
+    "id": 5,
+    "title": "PCB Design with KiCad",
+    "date": "2026-08-02",
+    "time": "10:00 AM - 2:00 PM",
+    "location": "Computer Lab 3, RCPIT",
+    "description": "Design professional PCBs from scratch — schematic capture, layout, and ordering from manufacturers.",
+    "tag": "Workshop",
+    "status": "upcoming"
+  },
+  {
+    "id": 6,
+    "title": "Guest Talk: Industry Trends in Embedded Systems",
+    "date": "2026-08-15",
+    "time": "3:00 PM - 5:00 PM",
+    "location": "Seminar Hall, RCPIT",
+    "description": "Industry expert shares insights on RISC-V, edge AI, and the future of embedded development.",
+    "tag": "Talk",
+    "status": "upcoming"
+  }
+]

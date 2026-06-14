@@ -1,0 +1,119 @@
+/* ═══════════════════════════════════════════════════════
+   Team Section
+   ═══════════════════════════════════════════════════════ */
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.team__card {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  perspective: 800px;
+}
+
+.team__card:hover {
+  transform: translateY(-8px);
+}
+
+.team__card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Avatar */
+.team__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.2);
+  transition: transform var(--transition-spring), box-shadow var(--transition-base);
+}
+
+.team__card:hover .team__avatar {
+  transform: scale(1.08);
+  box-shadow: 0 6px 30px rgba(0, 229, 255, 0.3);
+}
+
+.team__avatar-initials {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Info */
+.team__name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.team__role {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-cyan);
+  padding: 0.2rem 0.8rem;
+  background: rgba(0, 229, 255, 0.08);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+.team__bio {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: var(--space-sm);
+}
+
+/* Socials */
+.team__socials {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.team__social-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all var(--transition-fast);
+}
+
+.team__social-link:hover {
+  color: var(--accent-cyan);
+  background: rgba(0, 229, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Rahul Patil",
+    "role": "President",
+    "bio": "Final year CS student passionate about embedded systems and IoT.",
+    "avatar": null,
+    "socials": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 2,
+    "name": "Sneha Deshmukh",
+    "role": "Vice President",
+    "bio": "Electronics enthusiast with a knack for PCB design and robotics.",
+    "avatar": null,
+    "socials": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 3,
+    "name": "Amit Sharma",
+    "role": "Technical Lead",
+    "bio": "Full-stack developer and Arduino wizard. Loves building smart devices.",
+    "avatar": null,
+    "socials": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 4,
+    "name": "Priya Joshi",
+    "role": "Events Coordinator",
+    "bio": "Organizes workshops and hackathons. Believes in learning by doing.",
+    "avatar": null,
+    "socials": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 5,
+    "name": "Vikram Chaudhari",
+    "role": "Content Lead",
+    "bio": "Creates technical content and documentation for the club projects.",
+    "avatar": null,
+    "socials": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 6,
+    "name": "Ananya Kulkarni",
+    "role": "Design Lead",
+    "bio": "UI/UX designer who bridges the gap between hardware and user experience.",
+    "avatar": null,
+    "socials": { "github": "#", "linkedin": "#" }
+  }
+]
