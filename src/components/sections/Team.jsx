@@ -29,14 +29,17 @@ export default function Team() {
 
   return (
     <section className="team section" id="team">
-      <div className="section-label">Our Team</div>
-      <h2 className="section-title">
-        Meet the <span className="gradient-text">Crew</span>
-      </h2>
-      <p className="section-subtitle">
-        The passionate students behind Commexus who make it all happen.
-        Each one brings unique skills to the table.
-      </p>
+      <div className="section-header section-header--center">
+        <div className="section-label">Our Team</div>
+        <h2 className="section-title">
+          Meet the <span className="gradient-text">Crew</span>
+        </h2>
+        <div className="section-divider" />
+        <p className="section-subtitle">
+          The passionate students behind Commexus who make it all happen.
+          Each one brings unique skills to the table.
+        </p>
+      </div>
 
       <div className="team__grid" ref={gridRef}>
         {teamData.map((member, i) => (

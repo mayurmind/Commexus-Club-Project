@@ -184,6 +184,44 @@ a:hover {
   margin-bottom: var(--space-3xl);
 }
 
+/* Centered Section Header Style */
+.section-header {
+  margin-bottom: var(--space-3xl);
+}
+
+.section-header--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-header--center .section-label {
+  justify-content: center;
+}
+
+.section-header--center .section-label::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent-cyan);
+}
+
+.section-header--center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.section-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--gradient-hero);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: var(--radius-full);
+}
+
 /* ─── Gradient Text ─── */
 .gradient-text {
   background: var(--gradient-hero);

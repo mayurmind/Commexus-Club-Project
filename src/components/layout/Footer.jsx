@@ -42,7 +42,6 @@ export default function Footer({ onNavigate }) {
             {[
               { label: 'Home', id: 'home' },
               { label: 'About Us', id: 'about' },
-              { label: 'Events', id: 'events' },
               { label: 'Team', id: 'team' },
               { label: 'Contact Us', id: 'contact' },
             ].map((link) => (

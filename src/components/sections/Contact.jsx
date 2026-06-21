@@ -55,14 +55,17 @@ export default function Contact() {
         />
       </div>
 
-      <div className="section-label">Get in Touch</div>
-      <h2 className="section-title">
-        Let's <span className="gradient-text">Connect</span>
-      </h2>
-      <p className="section-subtitle">
-        Have a question, want to collaborate, or interested in joining?
-        Drop us a message and we'll get back to you.
-      </p>
+      <div className="section-header section-header--center">
+        <div className="section-label">Get in Touch</div>
+        <h2 className="section-title">
+          Let's <span className="gradient-text">Connect</span>
+        </h2>
+        <div className="section-divider" />
+        <p className="section-subtitle">
+          Have a question, want to collaborate, or interested in joining?
+          Drop us a message and we'll get back to you.
+        </p>
+      </div>
 
       <div className="contact__grid" ref={sectionRef}>
         <form className="contact__form glass-card stagger-item" onSubmit={handleSubmit}>

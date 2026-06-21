@@ -45,7 +45,8 @@ export default function GlobeMap() {
     loadWorldData();
   }, []);
 
-  // Auto-rotation
+  // Auto-rotation disabled per user request
+  /*
   useEffect(() => {
     let animationFrameId;
     let lastTime = performance.now();
@@ -70,6 +71,7 @@ export default function GlobeMap() {
     animationFrameId = requestAnimationFrame(autoRotate);
     return () => cancelAnimationFrame(animationFrameId);
   }, [isDragging, progress]);
+  */
 
   const handleMouseDown = (event) => {
     setIsDragging(true);

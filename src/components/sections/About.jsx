@@ -97,14 +97,17 @@ export default function About() {
 
   return (
     <section className="about section" id="about">
-      <div className="section-label">About Us</div>
-      <h2 className="section-title">
-        Built by Students, <span className="gradient-text">for Students</span>
-      </h2>
-      <p className="section-subtitle">
-        Commexus Club is a student-led technical community at R. C. Patel Institute of Technology,
-        Shirpur. We believe the best way to learn engineering is by building things.
-      </p>
+      <div className="section-header section-header--center">
+        <div className="section-label">About Us</div>
+        <h2 className="section-title">
+          Built by Students, <span className="gradient-text">for Students</span>
+        </h2>
+        <div className="section-divider" />
+        <p className="section-subtitle">
+          Commexus Club is a student-led technical community at R. C. Patel Institute of Technology,
+          Shirpur. We believe the best way to learn engineering is by building things.
+        </p>
+      </div>
 
       <div className="about__pillars" ref={cardsRef}>
         {pillars.map((pillar, i) => (
