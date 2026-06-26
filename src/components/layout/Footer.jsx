@@ -12,6 +12,7 @@ export default function Footer({ onNavigate }) {
       <div className="footer__circuit-line" aria-hidden="true" />
 
       <div className="footer__content">
+        <div className="footer__giant-text" aria-hidden="true">COMMEXUS</div>
         <div className="footer__brand">
           <div className="footer__logo-row">
             <svg className="footer__logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
