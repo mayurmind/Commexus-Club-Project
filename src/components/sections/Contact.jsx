@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { useStaggerReveal } from '../../hooks/useScrollAnimation'
+import { getRandomCircuitBg } from '../../utils/randomBg'
 import './Contact.css'
 
 export default function Contact() {
@@ -43,8 +44,11 @@ export default function Contact() {
     }, 5000)
   }
 
+  const bgStyle = useRef({ backgroundImage: getRandomCircuitBg() }).current;
+
   return (
-    <section className="contact section" id="contact">
+    <section className="contact section" id="contact" style={bgStyle}>
+      <div className="container">
       {/* Background decorative image */}
       <div className="contact__bg-decor" aria-hidden="true">
         <img
@@ -168,6 +172,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

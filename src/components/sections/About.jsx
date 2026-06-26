@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react'
 import { useStaggerReveal } from '../../hooks/useScrollAnimation'
+import { getRandomCircuitBg } from '../../utils/randomBg'
 import './About.css'
 
 const stats = [
@@ -95,8 +96,11 @@ export default function About() {
   useStaggerReveal(cardsRef, '.stagger-item')
   useStaggerReveal(showcaseRef, '.showcase-item')
 
+  const bgStyle = useRef({ backgroundImage: getRandomCircuitBg() }).current;
+
   return (
-    <section className="about section" id="about">
+    <section className="about section" id="about" style={bgStyle}>
+      <div className="container">
       <div className="section-header section-header--center">
         <div className="section-label">About Us</div>
         <h2 className="section-title">
@@ -156,6 +160,7 @@ export default function About() {
           <circle cx="200" cy="30" r="3" fill="rgba(0,229,255,0.3)" />
           <circle cx="300" cy="50" r="3" fill="rgba(0,229,255,0.3)" />
         </svg>
+      </div>
       </div>
     </section>
   )

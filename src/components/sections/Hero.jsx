@@ -1,9 +1,13 @@
+import { useEffect, useRef, useState } from 'react'
 import GlobeMap from '../GlobeMap'
+import { getRandomCircuitBg } from '../../utils/randomBg'
 import './Hero.css'
 
 export default function Hero({ onNavigate }) {
+  const bgStyle = useRef({ backgroundImage: getRandomCircuitBg() }).current;
+
   return (
-    <section className="hero" id="home">
+    <section className="hero section" id="home" style={bgStyle}>
       <div className="hero__bg-image" aria-hidden="true">
         <img
           src="/images/circuit-board-macro.jpg"
@@ -13,6 +17,7 @@ export default function Hero({ onNavigate }) {
         />
       </div>
       <div className="hero__bg-grid" aria-hidden="true" />
+      <div className="container" style={{ height: '100%', position: 'relative' }}>
 
       <div className="hero__content">
         <div className="hero__layout">
@@ -66,6 +71,7 @@ export default function Hero({ onNavigate }) {
       </div>
 
       <div className="hero__bottom-fade" aria-hidden="true" />
+      </div>
     </section>
   )
 }
