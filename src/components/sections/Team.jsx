@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import { useStaggerReveal } from '../../hooks/useScrollAnimation'
-import { getRandomCircuitBg } from '../../utils/randomBg'
 import teamData from '../../data/team.json'
 import './Team.css'
 
@@ -51,11 +50,8 @@ export default function Team() {
   
   const members = teamData.filter(m => m.role !== 'President' && m.role !== 'Vice President')
 
-  const bgStyle = useRef({ backgroundImage: getRandomCircuitBg() }).current;
-
   return (
-    <section className="team section" id="team" style={bgStyle}>
-      <div className="container">
+    <section className="team section" id="team">
       <div className="section-header section-header--center">
         <div className="section-label">Our Team</div>
         <h2 className="section-title">
@@ -132,7 +128,6 @@ export default function Team() {
           ))}
         </div>
 
-      </div>
       </div>
     </section>
   )
