@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COMMEXUS | Loading</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-high": "#e6e8ea",
+                    "on-background": "#191c1e",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#004e5c",
+                    "secondary-fixed-dim": "#d0bcff",
+                    "outline": "#6d797d",
+                    "tertiary-fixed-dim": "#ffb873",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-dim": "#d8dadc",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#8455ef",
+                    "primary": "#00687a",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#3d494c",
+                    "on-tertiary-fixed": "#2d1600",
+                    "surface-tint": "#00687a",
+                    "on-secondary-fixed-variant": "#5516be",
+                    "surface": "#f7f9fb",
+                    "tertiary-fixed": "#ffdcbf",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary-container": "#e89337",
+                    "inverse-primary": "#4cd7f6",
+                    "surface-container": "#eceef0",
+                    "surface-variant": "#e0e3e5",
+                    "on-secondary-fixed": "#23005c",
+                    "on-primary-fixed": "#001f26",
+                    "on-tertiary-fixed-variant": "#6a3b00",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#8c5000",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#5b3200",
+                    "primary-fixed": "#acedff",
+                    "primary-container": "#06b6d4",
+                    "secondary-fixed": "#e9ddff",
+                    "inverse-surface": "#2d3133",
+                    "secondary": "#6b38d4",
+                    "on-primary-container": "#00424f",
+                    "on-surface": "#191c1e",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f7f9fb",
+                    "outline-variant": "#bcc9cd",
+                    "primary-fixed-dim": "#4cd7f6"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Sora"],
+                    "headline-md": ["Sora"],
+                    "label-sm": ["Sora"],
+                    "display": ["Sora"],
+                    "body-lg": ["Sora"],
+                    "body-md": ["Sora"],
+                    "label-md": ["Sora"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #F8FAFC;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .desaturated-logo {
+            filter: grayscale(100%) opacity(0.2);
+            transition: filter 0.8s ease;
+        }
+
+        .loader-container {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<main class="flex flex-col items-center justify-center space-y-6">
+<!-- Centerpiece Loader -->
+<div class="loader-container">
+<!-- STITCH_SVG_START:ANIMATION_5 class="w-full h-full" --><div class="w-full h-full" id="animated-svg-ANIMATION_5" style="display:block;"><svg fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" r="40" stroke="#F1F5F9" stroke-width="2"></circle>
+<path d="M50 10 A40 40 0 0 1 90 50" stroke="url(#loader-grad)" stroke-linecap="round" stroke-width="3">
+<animatetransform attributename="transform" dur="1.5s" from="0 50 50" repeatcount="indefinite" to="360 50 50" type="rotate"></animatetransform>
+</path>
+<defs>
+<lineargradient id="loader-grad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#00f2ff"></stop>
+<stop offset="100%" stop-color="#bc13fe"></stop>
+</lineargradient>
+</defs>
+</svg></div><!-- STITCH_SVG_END:ANIMATION_5 -->
+</div>
+<!-- Brand Identity Cluster -->
+<div class="flex flex-col items-center space-y-4 fade-in-up" style="animation-delay: 0.4s;">
+<!-- Desaturated Brand Logo -->
+<div class="w-8 h-8">
+<img alt="COMMEXUS Logo" class="w-full h-full object-contain desaturated-logo" src="https://lh3.googleusercontent.com/aida/AP1WRLuEb0lFzHB488ABl9afV2VD5cwG0OUfCeELPGpEHqbJ_JTqSenl-l1Er4V51I-MTQ4067V6hhspyWH-Ro8ZQxkoWOnAHmDvDx8fSXXvY_IWrof8Te_TOvDOkbAkU4AwlRbCBl1wQxJ0XV_13emqibSxn22Eook0Gv1duTups496b1DuinsrNJv2_KHgPzPhoR7ITmXadDjeN6uP4GFOvA-zHgcT2rsatomyrzZwUgIuRS9MyFQTstHqBwE"/>
+</div>
+<!-- Brand Wordmark -->
+<h1 class="font-headline-md text-headline-md tracking-[0.2em] font-[100] text-[#1E293B]">
+                COMMEXUS
+            </h1>
+</div>
+</main>
+<!-- Interactive Layer -->
+<div class="fixed inset-0 pointer-events-none opacity-5">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_rgba(0,104,122,0.1)_0%,_transparent_50%)]"></div>
+</div>
+<script>
+        // Subtle interaction for the desaturated logo on mouse movement or just atmospheric breathe
+        document.addEventListener('mousemove', (e) => {
+            const logo = document.querySelector('.desaturated-logo');
+            if (logo) {
+                const x = (window.innerWidth / 2 - e.pageX) / 50;
+                const y = (window.innerHeight / 2 - e.pageY) / 50;
+                logo.style.transform = `translate(${x}px, ${y}px)`;
+            }
+        });
+
+        // Simulating the loading completion for UX demonstration (optional redirect logic)
+        /*
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 1s ease';
+            document.body.style.opacity = '0';
+        }, 5000);
+        */
+    </script>
+</body></html>

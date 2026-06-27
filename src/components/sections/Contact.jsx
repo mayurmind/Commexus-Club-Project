@@ -45,15 +45,6 @@ export default function Contact() {
 
   return (
     <section className="contact section" id="contact">
-      {/* Background decorative image */}
-      <div className="contact__bg-decor" aria-hidden="true">
-        <img
-          src="/images/hardware-board.webp"
-          alt=""
-          className="contact__bg-img"
-          loading="lazy"
-        />
-      </div>
 
       <div className="section-header section-header--center">
         <div className="section-label">Get in Touch</div>
