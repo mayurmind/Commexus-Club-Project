@@ -4,69 +4,48 @@
     "name": "Parth Patil",
     "role": "President",
     "avatar": "/team-photos/parth.jpg",
-    "socials": {
-      "github": "#",
-      "linkedin": "#"
-    }
+    "socials":{"github": "#","linkedin": "#"}
   },
   {
     "id": 2,
     "name": "Ritesh Patil",
     "role": "Vice President",
     "avatar": "/team-photos/ritesh.jpg",
-    "socials": {
-      "github": "#",
-      "linkedin": "#"
-    }
+    "socials":{"github": "#","linkedin": "#"}
   },
   {
     "id": 3,
     "name": "Viraj Pawar",
     "role": "Technical Lead",
     "avatar": "/team-photos/Viraj.jpeg",
-    "socials": {
-      "github": "#",
-      "linkedin": "#"
-    }
+    "socials": {"github": "#","linkedin": "#"}
   },
   {
     "id": 4,
     "name": "Harshal Teli",
     "role": "Technical development",
     "avatar": "/team-photos/Harshal Teli.jpg",
-    "socials": {
-      "github": "harshalbasaiye",
-      "linkedin": "https://www.linkedin.com/in/harshal-basaiye-20b28632a"
-    }
+    "socials": {"github": "harshalbasaiye","linkedin": "https://www.linkedin.com/in/harshal-basaiye-20b28632a" }
   },
   {
     "id": 5,
     "name": "Vikram Chaudhari",
     "role": "Content Lead",
     "avatar": "/team-photos/vikram.jpg",
-    "socials": {
-      "github": "#",
-      "linkedin": "#"
-    }
+    "socials": {"github": "#","linkedin": "#"}
   },
   {
     "id": 6,
     "name": "Ananya Kulkarni",
     "role": "Design Lead",
     "avatar": "/team-photos/ananya.jpg",
-    "socials": {
-      "github": "#",
-      "linkedin": "#"
-    }
+    "socials": {"github": "#","linkedin": "#"}
   },
   {
     "id": 7,
     "name": "Darshan Patil",
     "role": "Design Lead",
     "avatar": "/team-photos/ananya.jpg",
-    "socials": {
-      "github": "#",
-      "linkedin": "#"
-    }
+    "socials":{"github": "#","linkedin": "#"}
   }
 ]
