@@ -45,8 +45,8 @@ export default function Team() {
   const leaders = []
   const vicePresident = teamData.find(m => m.role === 'Vice President')
   const president = teamData.find(m => m.role === 'President')
-  if (vicePresident) leaders.push(vicePresident)
   if (president) leaders.push(president)
+  if (vicePresident) leaders.push(vicePresident)
   
   const members = teamData.filter(m => m.role !== 'President' && m.role !== 'Vice President')
 
@@ -68,13 +68,13 @@ export default function Team() {
         
         {/* Leaders Section */}
         {leaders.length > 0 && (
-          <div className="team__leaders-grid">
-            {leaders.map((member, i) => (
-              <div key={member.id} className="team__card team__card--horizontal glass-card stagger-item">
-                <div className="team__card-inner team__card-inner--horizontal">
-                  
-                  {/* Left Half: Photo Box */}
-                  <div className="team__photo-box">
+          <div className="team__section-group">
+            <h3 className="team__group-title stagger-item">Leadership</h3>
+            <div className="team__leaders-grid">
+              {leaders.map((member, i) => (
+                <div key={member.id} className="team__card stagger-item">
+                  <div className="team__card-inner">
+                    
                     <div className="team__avatar team__avatar--box" style={{ background: getAvatarGradient(i) }}>
                       <img 
                         src={member.avatar || `https://i.pravatar.cc/150?u=${member.id}`} 
@@ -82,30 +82,27 @@ export default function Team() {
                         className="team__avatar-image" 
                       />
                     </div>
-                  </div>
 
-                  {/* Right Half: All Info */}
-                  <div className="team__info-box">
                     <h3 className="team__name">{member.name}</h3>
                     <span className="team__role team__role--highlight">{member.role}</span>
                     <p className="team__bio">{member.bio}</p>
                     <SocialLinks member={member} />
-                  </div>
 
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
 
         {/* Regular Members Grid */}
-        <div className="team__grid">
-          {members.map((member, i) => (
-            <div key={member.id} className="team__card team__card--horizontal glass-card stagger-item">
-              <div className="team__card-inner team__card-inner--horizontal">
-                
-                {/* Left Half: Photo Box */}
-                <div className="team__photo-box">
+        <div className="team__section-group">
+          <h3 className="team__group-title stagger-item">Core Team</h3>
+          <div className="team__grid">
+            {members.map((member, i) => (
+              <div key={member.id} className="team__card stagger-item">
+                <div className="team__card-inner">
+                  
                   <div className="team__avatar team__avatar--box" style={{ background: getAvatarGradient(i + leaders.length) }}>
                     <img 
                       src={member.avatar || `https://i.pravatar.cc/150?u=${member.id}`} 
@@ -113,19 +110,16 @@ export default function Team() {
                       className="team__avatar-image" 
                     />
                   </div>
-                </div>
 
-                {/* Right Half: All Info */}
-                <div className="team__info-box">
                   <h3 className="team__name">{member.name}</h3>
                   <span className="team__role">{member.role}</span>
                   <p className="team__bio">{member.bio}</p>
                   <SocialLinks member={member} />
-                </div>
 
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
       </div>

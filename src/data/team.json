@@ -1,50 +1,51 @@
 [
   {
     "id": 1,
-    "name": "Rahul Patil",
+    "name": "Parth Patil",
     "role": "President",
-    "bio": "Final year CS student passionate about embedded systems and IoT.",
-    "avatar": null,
+    "avatar": "/src/data/Team Photos/parth.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 2,
-    "name": "Sneha Deshmukh",
+    "name": "Ritesh Patil",
     "role": "Vice President",
-    "bio": "Electronics enthusiast with a knack for PCB design and robotics.",
-    "avatar": null,
+    "avatar": "/src/data/Team Photos/ritesh.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 3,
-    "name": "Amit Sharma",
+    "name": "Viraj Pawar",
     "role": "Technical Lead",
-    "bio": "Full-stack developer and Arduino wizard. Loves building smart devices.",
-    "avatar": null,
+    "avatar": "/src/data/Team Photos/Viraj Pawer.jpeg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 4,
     "name": "Priya Joshi",
     "role": "Events Coordinator",
-    "bio": "Organizes workshops and hackathons. Believes in learning by doing.",
-    "avatar": null,
+    "avatar": "/src/data/Team Photos/priya.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 5,
     "name": "Vikram Chaudhari",
     "role": "Content Lead",
-    "bio": "Creates technical content and documentation for the club projects.",
-    "avatar": null,
+    "avatar": "/src/data/Team Photos/vikram.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 6,
     "name": "Ananya Kulkarni",
     "role": "Design Lead",
-    "bio": "UI/UX designer who bridges the gap between hardware and user experience.",
-    "avatar": null,
+    "avatar": "/src/data/Team Photos/ananya.jpg",
+    "socials": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 7,
+    "name": "Darshan Patil",
+    "role": "Design Lead",
+    "avatar": "/src/data/Team Photos/ananya.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   }
 ]

@@ -2,22 +2,39 @@
    Team Section
    ═══════════════════════════════════════════════════════ */
 
-.team__leaders-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
+.team__section-group {
   margin-bottom: var(--space-2xl);
+}
+
+.team__group-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+  font-weight: 600;
+}
+
+.team__leaders-grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.team__leaders-grid .team__card {
+  flex: 0 1 300px; /* Give them a max width so they don't stretch too far */
 }
 
 .team__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2xl);
 }
 
 .team__card {
   text-align: center;
-  padding: var(--space-2xl) var(--space-xl);
+  padding: var(--space-xl) var(--space-md);
   perspective: 800px;
 }
 
@@ -64,12 +81,9 @@
 }
 
 .team__role--highlight {
-  background: var(--gradient-hero);
-  color: white;
-  border: none;
-  font-size: 0.8rem;
-  margin-bottom: var(--space-sm);
-  margin-top: var(--space-xs);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 4px;
 }
 
 .team__card--horizontal .team__bio {
@@ -96,10 +110,11 @@
 
 .team__avatar--box {
   width: 100%;
-  max-width: 140px;
+  max-width: 130px;
   aspect-ratio: 1;
   height: auto;
-  border-radius: var(--radius-lg);
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 .team__avatar--large {
@@ -139,15 +154,9 @@
 }
 
 .team__role {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--accent-cyan);
-  padding: 0.2rem 0.8rem;
-  background: rgba(0, 229, 255, 0.08);
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(0, 229, 255, 0.15);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
 }
 
 .team__bio {
@@ -184,9 +193,8 @@
   transform: translateY(-2px);
 }
 
-/* Mobile */
+/* Responsive Layouts */
 @media (max-width: 1024px) {
-  .team__leaders-grid,
   .team__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -216,7 +224,11 @@
 }
 
 @media (max-width: 640px) {
-  .team__leaders-grid,
+  .team__leaders-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .team__grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
