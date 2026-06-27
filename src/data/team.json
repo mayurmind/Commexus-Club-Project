@@ -3,49 +3,49 @@
     "id": 1,
     "name": "Parth Patil",
     "role": "President",
-    "avatar": "/src/data/Team Photos/parth.jpg",
+    "avatar": "/team-photos/parth.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 2,
     "name": "Ritesh Patil",
     "role": "Vice President",
-    "avatar": "/src/data/Team Photos/ritesh.jpg",
+    "avatar": "/team-photos/ritesh.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 3,
     "name": "Viraj Pawar",
     "role": "Technical Lead",
-    "avatar": "/src/data/Team Photos/Viraj.jpeg",
+    "avatar": "/team-photos/Viraj.jpeg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 4,
     "name": "Priya Joshi",
     "role": "Events Coordinator",
-    "avatar": "/src/data/Team Photos/priya.jpg",
+    "avatar": "/team-photos/priya.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 5,
     "name": "Vikram Chaudhari",
     "role": "Content Lead",
-    "avatar": "/src/data/Team Photos/vikram.jpg",
+    "avatar": "/team-photos/vikram.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 6,
     "name": "Ananya Kulkarni",
     "role": "Design Lead",
-    "avatar": "/src/data/Team Photos/ananya.jpg",
+    "avatar": "/team-photos/ananya.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   },
   {
     "id": 7,
     "name": "Darshan Patil",
     "role": "Design Lead",
-    "avatar": "/src/data/Team Photos/ananya.jpg",
+    "avatar": "/team-photos/ananya.jpg",
     "socials": { "github": "#", "linkedin": "#" }
   }
 ]
