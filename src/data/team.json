@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Parth Patil",
     "role": "President",
-    "avatar": "/Core-team-photos/parth.jpg",
-    "socials":{"github": "#","linkedin": "#"}
+    "avatar": "/Core-team-photos/Parth Patil.png",
+    "socials":{"github": "#","linkedin": "https://www.linkedin.com/in/parth253?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
   },
   {
     "id": 2,
@@ -25,27 +25,35 @@
     "name": "Harshal Teli",
     "role": "Technical development",
     "avatar": "/Core-team-photos/Harshal Teli.jpg",
-    "socials": {"github": "harshalbasaiye","linkedin": "https://www.linkedin.com/in/harshal-basaiye-20b28632a" }
+    "socials": {"github": "#","linkedin": "https://www.linkedin.com/in/harshal-basaiye-20b28632a" }
   },
   {
     "id": 5,
-    "name": "Vikram Chaudhari",
-    "role": "Content Lead",
-    "avatar": "/Core-team-photos/vikram.jpg",
-    "socials": {"github": "#","linkedin": "#"}
+    "name": "Vaibhav More",
+    "role": "Technical development",
+    "avatar": "/Core-team-photos/Vaibhav More.jpg",
+    "socials": {"github": "#","linkedin": "https://www.linkedin.com/in/vaibhav-more-33a8b9337?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
   },
   {
     "id": 6,
-    "name": "Ananya Kulkarni",
-    "role": "Design Lead",
-    "avatar": "/Core-team-photos/ananya.jpg",
-    "socials": {"github": "#","linkedin": "#"}
+    "name": "Kajal Chaudhari",
+    "role": "Technical development",
+    "avatar": "/Core-team-photos/Kajal Chaudhari.jpg",
+    "socials": {"github": "https://github.com/chaudharikajal489-sys","linkedin": "https://www.linkedin.com/in/kajal-chaudhari-870037322?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
   },
   {
     "id": 7,
-    "name": "Darshan Patil",
-    "role": "Design Lead",
-    "avatar": "/Core-team-photos/ananya.jpg",
-    "socials":{"github": "#","linkedin": "#"}
+    "name": "Janhavi Patil",
+    "role": "Software development",
+    "avatar": "/Core-team-photos/Janhavi Patil.jpg",
+    "socials":{"github": "https://github.com/Janhavipatil12","linkedin": "https://www.linkedin.com/in/janhavi-patil1207"}
+  },
+ 
+   {
+    "id": 8,
+    "name": "Vivek Kadam",
+    "role": "Technical development",
+    "avatar": "/Core-team-photos/vivek kadam.webp",
+    "socials": {"github": "#","linkedin": "https://www.linkedin.com/in/vivek-kadam-926ba432b?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
   }
 ]
