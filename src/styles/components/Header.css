@@ -16,7 +16,7 @@
   background: rgba(10, 10, 15, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: none;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 

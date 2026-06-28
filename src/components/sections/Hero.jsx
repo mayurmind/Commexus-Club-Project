@@ -1,5 +1,5 @@
 import GlobeMap from '../GlobeMap'
-import './Hero.css'
+import '../../styles/components/Hero.css'
 
 export default function Hero({ onNavigate }) {
   return (

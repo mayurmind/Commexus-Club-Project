@@ -4,6 +4,7 @@ import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Team from './components/sections/Team'
+import Gallery from './components/sections/Gallery'
 import Contact from './components/sections/Contact'
 import LoadingScreen from './components/layout/LoadingScreen'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
@@ -24,6 +25,7 @@ export default function App() {
         <Hero onNavigate={handleNavigate} />
         <About />
         <Team />
+        <Gallery />
         <Contact />
       </main>
       <Footer onNavigate={handleNavigate} />

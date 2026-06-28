@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useStaggerReveal } from '../../hooks/useScrollAnimation'
 import eventsData from '../../data/events.json'
-import './Events.css'
+import '../../styles/components/Events.css'
 
 const tagColors = {
   Workshop: { bg: 'rgba(0, 229, 255, 0.1)', color: '#00e5ff', border: 'rgba(0, 229, 255, 0.3)' },

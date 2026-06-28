@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useStaggerReveal } from '../../hooks/useScrollAnimation'
 import teamData from '../../data/team.json'
-import './Team.css'
+import '../../styles/components/Team.css'
 
 function getInitials(name) {
   return name

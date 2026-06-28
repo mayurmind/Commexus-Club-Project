@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react'
 import { useStaggerReveal } from '../../hooks/useScrollAnimation'
-import './About.css'
+import '../../styles/components/About.css'
 
 const stats = [
   { value: 50, suffix: '+', label: 'Active Members' },

@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { useStaggerReveal } from '../../hooks/useScrollAnimation'
-import './Contact.css'
+import '../../styles/components/Contact.css'
 
 export default function Contact() {
   const sectionRef = useRef(null)
