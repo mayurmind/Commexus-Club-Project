@@ -48,12 +48,32 @@
     "avatar": "/Core-team-photos/Janhavi Patil.jpg",
     "socials":{"github": "https://github.com/Janhavipatil12","linkedin": "https://www.linkedin.com/in/janhavi-patil1207"}
   },
- 
    {
     "id": 8,
     "name": "Vivek Kadam",
     "role": "Technical development",
     "avatar": "/Core-team-photos/vivek kadam.webp",
     "socials": {"github": "#","linkedin": "https://www.linkedin.com/in/vivek-kadam-926ba432b?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
+  },
+  {
+    "id": 9,
+    "name": "#",
+    "role": "#",
+    "avatar": "#",
+    "socials": {"github": "#","linkedin": "#"}
+  },
+  {
+    "id": 10,
+    "name": "#",
+    "role": "#",
+    "avatar": "#",
+    "socials": {"github": "#","linkedin": "#"}
+  },
+  {
+    "id": 11,
+    "name": "#",
+    "role": "#",
+    "avatar": "#",
+    "socials": {"github": "#","linkedin": "#"}
   }
 ]
