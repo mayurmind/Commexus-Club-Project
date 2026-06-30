@@ -1,23 +1,44 @@
 import { useEffect, useRef } from 'react'
-import { useStaggerReveal } from '../../hooks/useScrollAnimation'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useStaggerReveal, useHeroEntrance, useCardReveal } from '../../hooks/useScrollAnimation'
 import '../../styles/components/ArduinoPage.css'
 
 export default function ArduinoPage({ onBackToHome }) {
   const containerRef = useRef(null)
+  const heroRef = useRef(null)
   useStaggerReveal(containerRef, '.stagger-item')
+  useHeroEntrance(heroRef)
+  useCardReveal(containerRef, '.animate-card')
 
-  // Scroll to top on mount
+  // Force scroll to top on mount — clears GSAP scroll memory to prevent mid-page start
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    // Immediate reset
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+    window.scrollTo(0, 0)
+
+    // Clear any saved scroll position in GSAP ScrollTrigger
+    ScrollTrigger.clearScrollMemory()
+
+    // Re-confirm after a frame (browser may restore scroll after hydration)
+    const raf = requestAnimationFrame(() => {
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+      window.scrollTo(0, 0)
+      ScrollTrigger.refresh()
+    })
+
+    return () => cancelAnimationFrame(raf)
   }, [])
 
   return (
     <div className="arduino-page" ref={containerRef}>
       
       {/* Hero Section */}
-      <section className="arduino-hero">
+      <section className="arduino-hero" ref={heroRef}>
         <div className="arduino-hero__bg">
-          <img src="/images/arduino-robot.jpeg" alt="" className="arduino-hero__bg-img" />
+          <img src="/images/arduino-bg.png" alt="" className="arduino-hero__bg-img" />
         </div>
         <div className="container arduino-hero__content">
           <div className="arduino-hero__badge stagger-item">
@@ -93,7 +114,7 @@ export default function ArduinoPage({ onBackToHome }) {
                   <img 
                     src="/images/arduino-robot.jpeg" 
                     alt="Arduino-powered robot built by club members" 
-                    style={{ width: '100%', height: '100%', object-fit: 'cover', filter: 'brightness(0.9)' }} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.9)' }} 
                   />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(transparent 50%, rgba(10,12,22,0.95))' }} />
                 </div>
@@ -287,7 +308,7 @@ export default function ArduinoPage({ onBackToHome }) {
               <p className="arduino-section__subtitle">Microcontrollers designed for different form factors, input densities, and processing requirements.</p>
               
               <div className="board-grid">
-                <div className="board-card">
+                <div className="board-card animate-card">
                   <div className="board-card__header">
                     <span className="board-card__badge">Standard</span>
                     <h3 className="board-card__title">Arduino Uno</h3>
@@ -311,7 +332,7 @@ export default function ArduinoPage({ onBackToHome }) {
                   </div>
                 </div>
 
-                <div className="board-card">
+                <div className="board-card animate-card">
                   <div className="board-card__header">
                     <span className="board-card__badge" style={{ color: 'var(--accent-purple)', background: 'rgba(124, 58, 237, 0.08)', borderColor: 'rgba(124, 58, 237, 0.2)' }}>Heavy Duty</span>
                     <h3 className="board-card__title">Arduino Mega</h3>
@@ -335,7 +356,7 @@ export default function ArduinoPage({ onBackToHome }) {
                   </div>
                 </div>
 
-                <div className="board-card">
+                <div className="board-card animate-card">
                   <div className="board-card__header">
                     <span className="board-card__badge" style={{ color: 'var(--accent-cyan)', background: 'rgba(0, 229, 255, 0.08)', borderColor: 'rgba(0, 229, 255, 0.2)' }}>Compact</span>
                     <h3 className="board-card__title">Arduino Nano</h3>
@@ -361,6 +382,205 @@ export default function ArduinoPage({ onBackToHome }) {
               </div>
             </div>
 
+          </div>
+        </section>
+        {/* Popular Arduino Libraries */}
+        <section className="arduino-section" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.03)' }}>
+          <div className="section-header section-header--center">
+            <h2 className="arduino-section__title stagger-item">Popular Arduino Libraries</h2>
+            <p className="arduino-section__subtitle stagger-item">
+              Pre-written collections of code that simplify hardware control and allow developers to build complex systems faster without writing everything from scratch.
+            </p>
+          </div>
+
+          <div className="library-grid">
+            <div className="library-card stagger-item animate-card">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>🔌</span>
+                <h3 className="library-card__title">1. Servo Library</h3>
+              </div>
+              <p className="library-card__purpose">
+                Controls servo motors with precise angle movement (typically 0° to 180°).
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">Robotic arms & steering</li>
+                  <li className="library-card__item">Automatic doors & locks</li>
+                  <li className="library-card__item">Camera mount tilting</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>🔗</span>
+                <h3 className="library-card__title">2. Wire Library</h3>
+              </div>
+              <p className="library-card__purpose">
+                Enables multi-device communication using the two-wire I2C protocol.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">OLED & LCD displays</li>
+                  <li className="library-card__item">Real-time clocks (RTC)</li>
+                  <li className="library-card__item">I2C compatible sensors</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>⚡</span>
+                <h3 className="library-card__title">3. SPI Library</h3>
+              </div>
+              <p className="library-card__purpose">
+                Provides high-speed synchronous serial data communication for SPI devices.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">SD card modules</li>
+                  <li className="library-card__item">TFT display screens</li>
+                  <li className="library-card__item">Wireless transceivers</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>📺</span>
+                <h3 className="library-card__title">4. LiquidCrystal</h3>
+              </div>
+              <p className="library-card__purpose">
+                Controls character-based alphanumeric LCD screens (e.g., 16x2 or 20x4).
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">Displaying sensor values</li>
+                  <li className="library-card__item">Printing system messages</li>
+                  <li className="library-card__item">Showing operational states</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>🎨</span>
+                <h3 className="library-card__title">5. Adafruit GFX</h3>
+              </div>
+              <p className="library-card__purpose">
+                Core graphics library providing shapes, lines, pixels, and text rendering.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">OLED graphical displays</li>
+                  <li className="library-card__item">Drawing shapes & outlines</li>
+                  <li className="library-card__item">Custom font text styling</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>🌡️</span>
+                <h3 className="library-card__title">6. Adafruit Sensor</h3>
+              </div>
+              <p className="library-card__purpose">
+                Unified sensor driver offering a standardized interface for sensor readings.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">Accelerometers & Gyros</li>
+                  <li className="library-card__item">Pressure & Temp modules</li>
+                  <li className="library-card__item">Standardized data output</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>💧</span>
+                <h3 className="library-card__title">7. DHT Sensor</h3>
+              </div>
+              <p className="library-card__purpose">
+                Reads temperature & humidity levels from DHT11 and DHT22 modules.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">Weather stations</li>
+                  <li className="library-card__item">Indoor climate monitoring</li>
+                  <li className="library-card__item">HVAC automation rules</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>📡</span>
+                <h3 className="library-card__title">8. WiFi Library</h3>
+              </div>
+              <p className="library-card__purpose">
+                Connects boards like Uno WiFi, ESP8266, and ESP32 to local networks.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">IoT smart cloud devices</li>
+                  <li className="library-card__item">Hosting local web servers</li>
+                  <li className="library-card__item">Remote API cloud calls</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>🔵</span>
+                <h3 className="library-card__title">9. Bluetooth</h3>
+              </div>
+              <p className="library-card__purpose">
+                Manages wireless Bluetooth data pipes, typically using serial interfaces.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">Mobile app remote controls</li>
+                  <li className="library-card__item">HC-05 / HC-06 configuration</li>
+                  <li className="library-card__item">Wireless state triggers</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="library-card stagger-item">
+              <div className="library-card__header">
+                <span style={{ fontSize: '1.5rem' }}>⚙️</span>
+                <h3 className="library-card__title">10. AccelStepper</h3>
+              </div>
+              <p className="library-card__purpose">
+                Advanced stepper motor driver with acceleration, deceleration, and speed profiles.
+              </p>
+              <div className="library-card__details">
+                <div className="library-card__details-title">Used For</div>
+                <ul className="library-card__items">
+                  <li className="library-card__item">CNC engraving machines</li>
+                  <li className="library-card__item">3D printer positioners</li>
+                  <li className="library-card__item">Smooth robotic kinematics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Library Ecosystem Card */}
+          <div className="project-card stagger-item" style={{ marginTop: '2rem', borderLeft: '3px solid var(--accent-cyan)' }}>
+            <h3 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Arduino Library Ecosystem</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              With thousands of community-developed libraries, Arduino allows rapid development of robotics systems, IoT devices, automation projects, sensor networks, and embedded prototypes. Libraries drastically reduce hardware-interfacing complexity, allowing engineers to focus on solving core architectural problems instead of rebuilding low-level bus registers.
+            </p>
           </div>
         </section>
 
@@ -405,7 +625,7 @@ export default function ArduinoPage({ onBackToHome }) {
               <p className="arduino-section__subtitle">Real solutions designed, built, and programmed by Commexus Club students.</p>
 
               <div className="board-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
-                <div className="project-card">
+                <div className="project-card animate-card">
                   <h3 className="project-card__title">Smart Home Automation</h3>
                   <div className="project-card__features">
                     <div className="project-card__features-title">Features</div>
@@ -423,7 +643,7 @@ export default function ArduinoPage({ onBackToHome }) {
                   </div>
                 </div>
 
-                <div className="project-card">
+                <div className="project-card animate-card">
                   <h3 className="project-card__title">Automatic Door System</h3>
                   <div className="project-card__features">
                     <div className="project-card__features-title">Features</div>
@@ -441,7 +661,7 @@ export default function ArduinoPage({ onBackToHome }) {
                   </div>
                 </div>
 
-                <div className="project-card">
+                <div className="project-card animate-card">
                   <h3 className="project-card__title">Mini Radar System</h3>
                   <div className="project-card__features">
                     <div className="project-card__features-title">Features</div>
@@ -459,7 +679,7 @@ export default function ArduinoPage({ onBackToHome }) {
                   </div>
                 </div>
 
-                <div className="project-card">
+                <div className="project-card animate-card">
                   <h3 className="project-card__title">Weather Station</h3>
                   <div className="project-card__features">
                     <div className="project-card__features-title">Features</div>

@@ -1,7 +1,10 @@
 import '../../styles/components/Footer.css'
 
-export default function Footer({ onNavigate }) {
+export default function Footer({ onNavigate, currentPage, onNavigateHome }) {
   const handleLink = (id) => {
+    if (currentPage !== 'home' && onNavigateHome) {
+      onNavigateHome()
+    }
     if (onNavigate) {
       onNavigate(`#${id}`)
     }

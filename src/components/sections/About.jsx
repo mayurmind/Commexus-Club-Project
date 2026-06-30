@@ -122,37 +122,50 @@ export default function About({ onNavigatePage }) {
       <div className="about__showcase" ref={showcaseRef}>
         <h3 className="about__showcase-title">What We Work With</h3>
         <div className="about__showcase-grid">
-          {showcase.map((item, i) => (
-            <div 
-              key={i} 
-              className={`about__showcase-card showcase-item ${item.label === 'Arduino' ? 'about__showcase-card--clickable' : ''}`}
-              onClick={() => {
-                if (item.label === 'Arduino' && onNavigatePage) {
-                  onNavigatePage('arduino')
-                }
-              }}
-              style={item.label === 'Arduino' ? { cursor: 'pointer' } : {}}
-              role={item.label === 'Arduino' ? 'button' : undefined}
-              tabIndex={item.label === 'Arduino' ? 0 : undefined}
-              onKeyDown={(e) => {
-                if (item.label === 'Arduino' && (e.key === 'Enter' || e.key === ' ')) {
-                  e.preventDefault()
-                  onNavigatePage('arduino')
-                }
-              }}
-            >
-              <div className="about__showcase-img-wrap">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="about__showcase-img"
-                  loading="lazy"
-                />
-                <div className="about__showcase-overlay" />
+          {showcase.map((item, i) => {
+            const isClickable = item.label === 'Arduino' || item.label === 'IoT & ESP32' || item.label === 'Embedded C' || item.label === 'Microcontrollers'
+            const pageName = item.label === 'Arduino' ? 'arduino' : item.label === 'IoT & ESP32' ? 'esp32' : item.label === 'Embedded C' ? 'embedded-c' : 'microcontrollers'
+            
+            return (
+              <div 
+                key={i} 
+                className={`about__showcase-card showcase-item ${isClickable ? 'about__showcase-card--clickable' : ''}`}
+                onClick={() => {
+                  if (isClickable && onNavigatePage) {
+                    onNavigatePage(pageName)
+                  }
+                }}
+                style={isClickable ? { cursor: 'pointer' } : {}}
+                role={isClickable ? 'button' : undefined}
+                tabIndex={isClickable ? 0 : undefined}
+                onKeyDown={(e) => {
+                  if (isClickable && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault()
+                    onNavigatePage(pageName)
+                  }
+                }}
+              >
+                <div className="about__showcase-img-wrap">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="about__showcase-img"
+                    loading="lazy"
+                  />
+                  <div className="about__showcase-overlay" />
+                </div>
+                <span className="about__showcase-label">{item.label}</span>
+                {isClickable && (
+                  <>
+                    <div className="about__showcase-badge">Interactive Guide</div>
+                    <div className="about__showcase-hover-overlay">
+                      <span>Explore Guide →</span>
+                    </div>
+                  </>
+                )}
               </div>
-              <span className="about__showcase-label">{item.label}</span>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 

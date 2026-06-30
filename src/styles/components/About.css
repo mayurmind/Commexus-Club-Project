@@ -121,6 +121,49 @@
   color: var(--text-primary);
 }
 
+.about__showcase-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  color: var(--accent-cyan);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 3;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.about__showcase-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 12, 22, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: 0;
+  transition: all var(--transition-base);
+  z-index: 4;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+.about__showcase-card:hover .about__showcase-hover-overlay {
+  opacity: 1;
+}
+
 /* Stats */
 .about__stats {
   display: grid;
