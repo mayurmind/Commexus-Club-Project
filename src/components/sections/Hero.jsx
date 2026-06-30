@@ -30,7 +30,7 @@ export default function Hero({ onNavigate }) {
             <p className="hero__subtitle">Where Code Meets Circuits</p>
 
             <p className="hero__description">
-              Empowering students through hands-on workshops, hackathons, and projects
+              Empowering students through hands-on workshops and projects
               in embedded systems, IoT, and beyond. Build real hardware. Write real code.
               Make real impact.
             </p>

@@ -77,12 +77,12 @@ export default function Footer({ onNavigate }) {
                 LinkedIn
               </a>
             </li>
-            <li>
+            {/* <li>
               <a className="footer__link" href="#">
                 <span className="footer__link-arrow">🐙</span>
                 GitHub
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

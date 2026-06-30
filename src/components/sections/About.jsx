@@ -3,35 +3,34 @@ import { useStaggerReveal } from '../../hooks/useScrollAnimation'
 import '../../styles/components/About.css'
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Active Members' },
-  { value: 20, suffix: '+', label: 'Events Hosted' },
-  { value: 10, suffix: '+', label: 'Projects Built' },
-  { value: 15, suffix: '+', label: 'Workshops' },
+  { value: 14, suffix: '+', label: 'Active Members' },
+  { value: 1, suffix: '+', label: 'Projects Built' },
+  { value: 1, suffix: '+', label: 'Workshops' },
 ]
 
 const pillars = [
+   {
+    icon: '🔭',
+    title: 'Our Vision',
+    description: 'Create a community of makers and innovators at RCPIT who push boundaries in IoT, robotics, and embedded computing — one project at a time.',
+  },
   {
     icon: '⚡',
     title: 'Our Mission',
     description: 'Bridge the gap between theory and practice. We empower students to build real embedded systems, write production code, and solve engineering problems hands-on.',
   },
   {
-    icon: '🔭',
-    title: 'Our Vision',
-    description: 'Create a community of makers and innovators at RCPIT who push boundaries in IoT, robotics, and embedded computing — one project at a time.',
-  },
-  {
     icon: '🛠️',
     title: 'What We Do',
-    description: 'From Arduino workshops to PCB design sessions, hackathons to industry talks — we provide the platform, tools, and mentorship for every aspiring engineer.',
+    description: 'From Arduino workshops to PCB design sessions, we provide the platform, tools, and mentorship for every aspiring engineer.',
   },
 ]
 
 const showcase = [
   {
-    src: '/images/arduino-robot.jpg',
+    src: '/images/arduino-robot.jpeg',
     alt: 'Arduino-powered robot built by club members',
-    label: 'Robotics',
+    label: 'Arduino',
   },
   {
     src: '/images/esp32-board.jpeg',
