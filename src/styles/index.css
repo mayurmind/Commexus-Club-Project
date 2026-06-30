@@ -13,34 +13,36 @@
 }
 
 :root {
-  /* Background */
-  --bg-primary: #070913;
-  --bg-secondary: #0d111f;
-  --bg-tertiary: #141a2e;
-  --bg-elevated: #1c243f;
+  /* Background - Deep Cybernetic Navy/Violet */
+  --bg-primary: hsl(235, 45%, 4%);
+  --bg-secondary: hsl(235, 38%, 7%);
+  --bg-tertiary: hsl(235, 32%, 12%);
+  --bg-elevated: hsl(235, 28%, 18%);
 
-  /* Accent Colors */
-  --accent-cyan: #06b6d4;      /* Clean turquoise/teal */
-  --accent-blue: #3b82f6;      /* Cobalt/Royal Blue */
-  --accent-orange: #f59e0b;    /* Warm gold */
-  --accent-purple: #8b5cf6;    /* Violet/Purple */
+  /* Accent Colors - Ultra Vibrant HSL */
+  --accent-cyan: hsl(185, 100%, 48%);       /* High-energy cyan */
+  --accent-blue: hsl(215, 100%, 55%);       /* Clean electric blue */
+  --accent-orange: hsl(24, 100%, 55%);      /* Burning circuit orange */
+  --accent-purple: hsl(265, 100%, 65%);     /* Deep tech violet */
 
-  /* Glass - Refined & professional white border, subtle blur */
-  --glass-bg: rgba(13, 17, 31, 0.65);
-  --glass-bg-hover: rgba(13, 17, 31, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --glass-border-hover: rgba(99, 102, 241, 0.25);
-  --glass-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+  /* Glass - Refined with subtle tinting and soft blurs */
+  --glass-bg: rgba(10, 12, 22, 0.7);
+  --glass-bg-hover: rgba(15, 18, 32, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.04);
+  --glass-border-hover: rgba(0, 229, 255, 0.25);
+  --glass-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7);
+  --neon-glow: 0 0 25px rgba(0, 229, 255, 0.35);
 
-  /* Text */
-  --text-primary: #f8fafc;     /* Slate 50 */
-  --text-secondary: #94a3b8;   /* Slate 400 */
-  --text-muted: #475569;       /* Slate 600 */
+  /* Text - High contrast against dark background */
+  --text-primary: hsl(210, 40%, 98%);      /* Off-white */
+  --text-secondary: hsl(215, 20%, 75%);    /* Silver grey */
+  --text-muted: hsl(215, 15%, 45%);        /* Dimmed grey */
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); /* Cobalt to Violet */
-  --gradient-card: linear-gradient(135deg, rgba(59, 130, 246, 0.06), rgba(139, 92, 246, 0.03));
-  --gradient-orange: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); /* Gold to Coral */
+  --gradient-hero: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 50%, var(--accent-cyan) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(139, 92, 246, 0.03));
+  --gradient-orange: linear-gradient(135deg, var(--accent-orange) 0%, #ef4444 100%);
+  --gradient-neon: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple));
 
   /* Fonts */
   --font-heading: 'Outfit', sans-serif;
@@ -225,9 +227,17 @@ a:hover {
 /* ─── Gradient Text ─── */
 .gradient-text {
   background: var(--gradient-hero);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ─── Container ─── */
