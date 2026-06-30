@@ -1,0 +1,532 @@
+/* ═══════════════════════════════════════════════════════
+   Arduino Detail Page Styles
+   Theme: "Circuit Night" — Glass · Neon · Responsive
+   ═══════════════════════════════════════════════════════ */
+
+.arduino-page {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  padding-top: 80px; /* Header space */
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ─── Hero Section ─── */
+.arduino-hero {
+  position: relative;
+  padding: var(--space-4xl) 0 var(--space-2xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.arduino-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.arduino-hero__badge {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: var(--space-md);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(0, 229, 255, 0.05);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+.arduino-hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.03em;
+}
+
+.arduino-hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto var(--space-xl);
+}
+
+.arduino-hero__desc {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.arduino-hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.arduino-hero__bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.arduino-hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.2) brightness(0.5);
+}
+
+/* ─── Page Grid ─── */
+.arduino-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-4xl);
+}
+
+.col-12 { grid-column: span 12; }
+.col-8 { grid-column: span 8; }
+.col-6 { grid-column: span 6; }
+.col-4 { grid-column: span 4; }
+
+/* ─── General Sections ─── */
+.arduino-section {
+  padding: var(--space-3xl) 0;
+}
+
+.arduino-section__title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  position: relative;
+  display: inline-block;
+}
+
+.arduino-section__title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-cyan);
+  border-radius: var(--radius-full);
+}
+
+.arduino-section__subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xl);
+  max-width: 700px;
+}
+
+/* ─── Highlights / Lists ─── */
+.arduino-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.arduino-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.arduino-list-bullet {
+  color: var(--accent-cyan);
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+/* ─── Why Matters Pillar Cards ─── */
+.arduino-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.arduino-pillar-card {
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-base);
+}
+
+.arduino-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05);
+}
+
+.arduino-pillar-card__icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  display: inline-block;
+}
+
+.arduino-pillar-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.arduino-pillar-card__desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ─── Architecture Cards ─── */
+.arch-card {
+  height: 100%;
+}
+
+.arch-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.arch-card__icon {
+  font-size: 1.8rem;
+}
+
+.arch-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ─── IDE Editor mockup ─── */
+.ide-mockup {
+  border-radius: var(--radius-md);
+  background: #090a10;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  margin-top: var(--space-lg);
+}
+
+.ide-mockup__header {
+  background: #12131a;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.ide-mockup__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.ide-mockup__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.ide-mockup__dot--red { background: #ff5f56; }
+.ide-mockup__dot--yellow { background: #ffbd2e; }
+.ide-mockup__dot--green { background: #27c93f; }
+
+.ide-mockup__title {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
+.ide-mockup__body {
+  padding: 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.ide-code {
+  color: #abb2bf;
+}
+
+.ide-code__comment { color: var(--text-muted); font-style: italic; }
+.ide-code__keyword { color: #c678dd; }
+.ide-code__type { color: #e5c07b; }
+.ide-code__function { color: #61afef; }
+.ide-code__string { color: #98c379; }
+.ide-code__number { color: #d19a66; }
+
+/* ─── Board Cards ─── */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.board-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+}
+
+.board-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--glass-border-hover);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 229, 255, 0.06);
+}
+
+.board-card__header {
+  margin-bottom: var(--space-md);
+}
+
+.board-card__badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: rgba(255, 107, 53, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+}
+
+.board-card__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.board-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.board-card__specs {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: var(--space-md);
+}
+
+.board-card__spec {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.board-card__spec-name {
+  color: var(--text-muted);
+}
+
+.board-card__spec-val {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+/* ─── Projects Grid ─── */
+.project-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  height: 100%;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-hero);
+  opacity: 0.4;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--glass-border-hover);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 229, 255, 0.08);
+}
+
+.project-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.project-card__features {
+  margin-bottom: var(--space-lg);
+}
+
+.project-card__features-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-bottom: 0.4rem;
+}
+
+.project-card__feature {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-card__feature::before {
+  content: '⚡';
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+}
+
+.project-card__components {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: var(--space-md);
+}
+
+.project-card__components-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-sm);
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--accent-cyan);
+}
+
+/* ─── Bottom CTA ─── */
+.arduino-cta {
+  text-align: center;
+  padding: var(--space-4xl) 0;
+  position: relative;
+}
+
+.arduino-cta__card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-2xl);
+  position: relative;
+  z-index: 2;
+}
+
+.arduino-cta__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+}
+
+.arduino-cta__text {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2xl);
+  line-height: 1.6;
+}
+
+.arduino-cta__bg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+/* ─── Responsive Media Queries ─── */
+@media (max-width: 1024px) {
+  .col-8, .col-6, .col-4 {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 768px) {
+  .arduino-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+
+  .arduino-hero__actions {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .arduino-hero__actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .arduino-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .arduino-grid {
+    gap: var(--space-lg);
+  }
+
+  .arduino-cta__card {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+}

@@ -8,7 +8,7 @@ const navLinks = [
   { id: 'contact', label: 'Contact Us' },
 ]
 
-export default function Header({ onNavigate }) {
+export default function Header({ onNavigate, currentPage, onNavigateHome }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
@@ -22,6 +22,8 @@ export default function Header({ onNavigate }) {
   }, [])
 
   useEffect(() => {
+    if (currentPage !== 'home') return
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -39,10 +41,13 @@ export default function Header({ onNavigate }) {
     })
 
     return () => observer.disconnect()
-  }, [])
+  }, [currentPage])
 
   const handleNavClick = (id) => {
     setMenuOpen(false)
+    if (currentPage !== 'home' && onNavigateHome) {
+      onNavigateHome()
+    }
     if (onNavigate) {
       onNavigate(`#${id}`)
     } else {

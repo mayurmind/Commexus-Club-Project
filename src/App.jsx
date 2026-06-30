@@ -8,29 +8,52 @@ import Team from './components/sections/Team'
 import Gallery from './components/sections/Gallery'
 import Contact from './components/sections/Contact'
 import LoadingScreen from './components/layout/LoadingScreen'
+import ArduinoPage from './components/sections/ArduinoPage'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 
 export default function App() {
   const { scrollTo } = useSmoothScroll()
   const [isLoading, setIsLoading] = useState(true)
+  const [currentPage, setCurrentPage] = useState('home')
 
   const handleNavigate = (target) => {
-    scrollTo(target)
+    if (currentPage !== 'home') {
+      setCurrentPage('home')
+      // Wait for React to mount the Home elements before scrolling
+      setTimeout(() => {
+        scrollTo(target)
+      }, 80)
+    } else {
+      scrollTo(target)
+    }
+  }
+
+  const handleBackToHome = () => {
+    setCurrentPage('home')
+    setTimeout(() => {
+      scrollTo('#about')
+    }, 80)
   }
 
   return (
     <>
       {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
-      <Header onNavigate={handleNavigate} />
+      <Header onNavigate={handleNavigate} currentPage={currentPage} onNavigateHome={() => setCurrentPage('home')} />
       <main>
-        <Hero onNavigate={handleNavigate} />
-        <GroupPhoto />
-        <About />
-        <Team />
-        <Gallery />
-        <Contact />
+        {currentPage === 'home' ? (
+          <>
+            <Hero onNavigate={handleNavigate} />
+            <GroupPhoto />
+            <About onNavigatePage={setCurrentPage} />
+            <Team />
+            <Gallery />
+            <Contact />
+          </>
+        ) : (
+          <ArduinoPage onBackToHome={handleBackToHome} />
+        )}
       </main>
-      <Footer onNavigate={handleNavigate} />
+      <Footer onNavigate={handleNavigate} currentPage={currentPage} onNavigateHome={() => setCurrentPage('home')} />
     </>
   )
 }

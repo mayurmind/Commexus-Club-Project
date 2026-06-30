@@ -88,7 +88,7 @@ function AnimatedCounter({ target, suffix = '' }) {
   )
 }
 
-export default function About() {
+export default function About({ onNavigatePage }) {
   const cardsRef = useRef(null)
   const showcaseRef = useRef(null)
   useStaggerReveal(cardsRef, '.stagger-item')
@@ -123,7 +123,24 @@ export default function About() {
         <h3 className="about__showcase-title">What We Work With</h3>
         <div className="about__showcase-grid">
           {showcase.map((item, i) => (
-            <div key={i} className="about__showcase-card showcase-item">
+            <div 
+              key={i} 
+              className={`about__showcase-card showcase-item ${item.label === 'Arduino' ? 'about__showcase-card--clickable' : ''}`}
+              onClick={() => {
+                if (item.label === 'Arduino' && onNavigatePage) {
+                  onNavigatePage('arduino')
+                }
+              }}
+              style={item.label === 'Arduino' ? { cursor: 'pointer' } : {}}
+              role={item.label === 'Arduino' ? 'button' : undefined}
+              tabIndex={item.label === 'Arduino' ? 0 : undefined}
+              onKeyDown={(e) => {
+                if (item.label === 'Arduino' && (e.key === 'Enter' || e.key === ' ')) {
+                  e.preventDefault()
+                  onNavigatePage('arduino')
+                }
+              }}
+            >
               <div className="about__showcase-img-wrap">
                 <img
                   src={item.src}
