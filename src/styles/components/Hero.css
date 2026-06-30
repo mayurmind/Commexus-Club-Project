@@ -49,8 +49,8 @@
   inset: 0;
   z-index: 1;
   background-image:
-    linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(99, 102, 241, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.02) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 20%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 20%, transparent 70%);
@@ -92,12 +92,12 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
-  background: rgba(0, 229, 255, 0.08);
-  border: 1px solid rgba(0, 229, 255, 0.15);
+  background: rgba(99, 102, 241, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.15);
   border-radius: var(--radius-full);
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--accent-cyan);
+  color: var(--accent-blue);
   letter-spacing: 0.05em;
   margin-bottom: var(--space-xl);
   animation: fade-in-up 0.8s ease-out both;
@@ -106,10 +106,10 @@
 .hero__badge-dot {
   width: 6px;
   height: 6px;
-  background: var(--accent-cyan);
+  background: var(--accent-blue);
   border-radius: 50%;
   animation: pulse-glow 2s ease-in-out infinite;
-  box-shadow: 0 0 8px var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-blue);
 }
 
 /* Title */
@@ -129,7 +129,7 @@
 .hero__subtitle {
   font-family: var(--font-mono);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  color: var(--accent-cyan);
+  color: var(--accent-purple);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: var(--space-lg);
@@ -169,7 +169,7 @@
 .hero__scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--accent-cyan), transparent);
+  background: linear-gradient(to bottom, var(--accent-blue), transparent);
   animation: bounce-arrow 2s ease-in-out infinite;
 }
 
@@ -206,7 +206,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 229, 255, 0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent 70%);
   filter: blur(60px);
 }
 

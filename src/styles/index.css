@@ -14,33 +14,33 @@
 
 :root {
   /* Background */
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #12121a;
-  --bg-tertiary: #1a1a2e;
-  --bg-elevated: #22223a;
+  --bg-primary: #070913;
+  --bg-secondary: #0d111f;
+  --bg-tertiary: #141a2e;
+  --bg-elevated: #1c243f;
 
   /* Accent Colors */
-  --accent-cyan: #00e5ff;
-  --accent-blue: #0066ff;
-  --accent-orange: #ff6b35;
-  --accent-purple: #7c3aed;
+  --accent-cyan: #06b6d4;      /* Clean turquoise/teal */
+  --accent-blue: #3b82f6;      /* Cobalt/Royal Blue */
+  --accent-orange: #f59e0b;    /* Warm gold */
+  --accent-purple: #8b5cf6;    /* Violet/Purple */
 
-  /* Glass */
-  --glass-bg: rgba(18, 18, 26, 0.6);
-  --glass-bg-hover: rgba(18, 18, 26, 0.8);
-  --glass-border: rgba(0, 229, 255, 0.12);
-  --glass-border-hover: rgba(0, 229, 255, 0.3);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  /* Glass - Refined & professional white border, subtle blur */
+  --glass-bg: rgba(13, 17, 31, 0.65);
+  --glass-bg-hover: rgba(13, 17, 31, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(99, 102, 241, 0.25);
+  --glass-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
 
   /* Text */
-  --text-primary: #f0f0f5;
-  --text-secondary: #8a8a9a;
-  --text-muted: #55556a;
+  --text-primary: #f8fafc;     /* Slate 50 */
+  --text-secondary: #94a3b8;   /* Slate 400 */
+  --text-muted: #475569;       /* Slate 600 */
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #0066ff 0%, #00e5ff 100%);
-  --gradient-card: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 229, 255, 0.05));
-  --gradient-orange: linear-gradient(135deg, #ff6b35 0%, #ff9a5c 100%);
+  --gradient-hero: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); /* Cobalt to Violet */
+  --gradient-card: linear-gradient(135deg, rgba(59, 130, 246, 0.06), rgba(139, 92, 246, 0.03));
+  --gradient-orange: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); /* Gold to Coral */
 
   /* Fonts */
   --font-heading: 'Outfit', sans-serif;
@@ -60,8 +60,8 @@
   /* Borders */
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
   --radius-full: 9999px;
 
   /* Transitions */

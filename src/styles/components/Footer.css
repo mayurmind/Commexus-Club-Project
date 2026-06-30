@@ -15,9 +15,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--accent-cyan) 20%,
-    var(--accent-blue) 50%,
-    var(--accent-cyan) 80%,
+    var(--accent-blue) 20%,
+    var(--accent-purple) 50%,
+    var(--accent-blue) 80%,
     transparent 100%
   );
   opacity: 0.4;
@@ -119,13 +119,13 @@
 }
 
 .footer__link:hover {
-  color: var(--accent-cyan);
+  color: var(--accent-blue);
   transform: translateX(4px);
 }
 
 .footer__link-arrow {
   font-size: 0.9rem;
-  color: var(--accent-cyan);
+  color: var(--accent-blue);
   opacity: 0.6;
   transition: opacity var(--transition-fast);
 }

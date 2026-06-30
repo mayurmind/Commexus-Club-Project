@@ -63,15 +63,15 @@
 }
 
 .contact__status--success {
-  background: rgba(0, 255, 136, 0.1);
-  color: #00ff88;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .contact__status--error {
-  background: rgba(255, 51, 102, 0.1);
-  color: #ff3366;
-  border: 1px solid rgba(255, 51, 102, 0.2);
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
 /* Info Cards */
@@ -91,7 +91,7 @@
 .contact__info-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.3));
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.35));
 }
 
 .contact__info-title {
@@ -110,7 +110,7 @@
 }
 
 a.contact__info-value {
-  color: var(--accent-cyan);
+  color: var(--accent-blue);
 }
 
 a.contact__info-value:hover {
@@ -161,11 +161,11 @@ a.contact__info-value:hover {
 }
 
 .contact__social:hover {
-  color: var(--accent-cyan);
-  border-color: rgba(0, 229, 255, 0.3);
-  background: rgba(0, 229, 255, 0.05);
+  color: var(--accent-blue);
+  border-color: rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.06);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
 }
 
 /* Mobile */

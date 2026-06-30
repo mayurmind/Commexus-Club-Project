@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
+import GroupPhoto from './components/sections/GroupPhoto'
 import About from './components/sections/About'
 import Team from './components/sections/Team'
 import Gallery from './components/sections/Gallery'
@@ -23,6 +24,7 @@ export default function App() {
       <Header onNavigate={handleNavigate} />
       <main>
         <Hero onNavigate={handleNavigate} />
+        <GroupPhoto />
         <About />
         <Team />
         <Gallery />

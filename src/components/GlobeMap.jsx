@@ -145,7 +145,7 @@ export default function GlobeMap() {
           .datum(graticule())
           .attr("d", graticulePath)
           .attr("fill", "none")
-          .attr("stroke", "rgba(0, 229, 255, 0.15)")
+          .attr("stroke", "rgba(59, 130, 246, 0.15)")
           .attr("stroke-width", 1)
           .attr("stroke-dasharray", "4, 4");
       }
@@ -164,8 +164,8 @@ export default function GlobeMap() {
           return (p && !p.includes("NaN")) ? p : "";
         } catch (e) { return ""; }
       })
-      .attr("fill", "rgba(0, 20, 30, 0.5)")
-      .attr("stroke", "#00e5ff")
+      .attr("fill", "rgba(15, 23, 42, 0.5)")
+      .attr("stroke", "var(--accent-cyan)")
       .attr("stroke-width", 1.2)
       .attr("filter", "url(#neon-glow)")
       .style("visibility", function () {
@@ -173,10 +173,10 @@ export default function GlobeMap() {
         return d && d.length > 0 ? "visible" : "hidden";
       })
       .on("mouseover", function() {
-        d3.select(this).attr("fill", "rgba(0, 229, 255, 0.2)");
+        d3.select(this).attr("fill", "rgba(59, 130, 246, 0.15)");
       })
       .on("mouseout", function() {
-        d3.select(this).attr("fill", "rgba(0, 20, 30, 0.5)");
+        d3.select(this).attr("fill", "rgba(15, 23, 42, 0.5)");
       });
 
     // Add nodes (LEDs) at some country centroids
@@ -191,7 +191,7 @@ export default function GlobeMap() {
                         .attr("cy", centroid[1])
                         .attr("r", 3)
                         .attr("fill", "#fff")
-                        .attr("stroke", "#00e5ff")
+                        .attr("stroke", "var(--accent-cyan)")
                         .attr("stroke-width", 1.5)
                         .attr("filter", "url(#neon-glow)")
                         .attr("class", `circuit-node anim-delay-${i % 5}`);
@@ -208,7 +208,7 @@ export default function GlobeMap() {
           .datum({ type: "Sphere" })
           .attr("d", sphereOutline)
           .attr("fill", "none")
-          .attr("stroke", "rgba(0, 229, 255, 0.4)")
+          .attr("stroke", "rgba(59, 130, 246, 0.3)")
           .attr("stroke-width", 2)
           .attr("filter", "url(#neon-glow)");
       }

@@ -13,11 +13,11 @@
 }
 
 .header--scrolled {
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: none;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 .header__nav {
@@ -99,7 +99,7 @@
 }
 
 .header__link--active {
-  color: var(--accent-cyan);
+  color: var(--accent-blue);
 }
 
 .header__link-indicator {
@@ -181,10 +181,10 @@
     align-items: flex-start;
     padding: 5rem 2rem 2rem;
     gap: 0.5rem;
-    background: rgba(10, 10, 15, 0.95);
+    background: rgba(11, 15, 25, 0.98);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    border-left: 1px solid var(--glass-border);
+    border-left: 1px solid rgba(59, 130, 246, 0.1);
     z-index: calc(var(--z-overlay) + 1);
     transition: right var(--transition-base);
   }
