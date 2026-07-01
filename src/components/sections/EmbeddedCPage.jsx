@@ -168,7 +168,7 @@ export default function EmbeddedCPage({ onBackToHome }) {
             </p>
           </div>
 
-          <div className="arduino-pillars" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+          <div className="arduino-pillars">
             <div className="arduino-pillar-card stagger-item" style={{ borderLeft: '3px solid var(--accent-cyan)' }}>
               <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>LAYER 01</div>
               <h4 style={{ color: 'var(--text-primary)', margin: '0.4rem 0' }}>Input Layer</h4>
@@ -299,7 +299,7 @@ export default function EmbeddedCPage({ onBackToHome }) {
               <h2 className="arduino-section__title">Communication Protocol Programming</h2>
               <p className="arduino-section__subtitle">Embedded C is used to program standard transceivers to serialize and shift data between microchips.</p>
               
-              <div className="arduino-pillars" style={{ gridTemplateColumns: 'repeat(4, 1fr)', marginTop: '0' }}>
+              <div className="arduino-pillars" style={{ marginTop: '0' }}>
                 <div className="arduino-pillar-card" style={{ borderTop: '2px solid var(--accent-cyan)' }}>
                   <span className="arduino-pillar-card__icon">🔌</span>
                   <h3 className="arduino-pillar-card__title">UART</h3>

@@ -331,7 +331,7 @@ export default function ESP32Page({ onBackToHome }) {
               <h2 className="arduino-section__title">Communication Protocols</h2>
               <p className="arduino-section__subtitle">ESP32 offers extensive hardware support for serial communication protocols to link controllers, chips, sensors, and screens.</p>
               
-              <div className="arduino-pillars" style={{ gridTemplateColumns: 'repeat(4, 1fr)', marginTop: '0' }}>
+              <div className="arduino-pillars" style={{ marginTop: '0' }}>
                 <div className="arduino-pillar-card" style={{ borderTop: '2px solid var(--accent-cyan)' }}>
                   <span className="arduino-pillar-card__icon">🔌</span>
                   <h3 className="arduino-pillar-card__title">UART</h3>

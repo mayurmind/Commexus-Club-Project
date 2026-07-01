@@ -284,7 +284,7 @@ export default function ArduinoPage({ onBackToHome }) {
               <h2 className="arduino-section__title">Communication Protocols</h2>
               <p className="arduino-section__subtitle">Arduino supports multiple industry standard communication protocols for exchanging data with other modules, sensors, and computers.</p>
               
-              <div className="arduino-pillars" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginTop: '0' }}>
+              <div className="arduino-pillars" style={{ marginTop: '0' }}>
                 <div className="arduino-pillar-card" style={{ borderTop: '2px solid var(--accent-cyan)' }}>
                   <span className="arduino-pillar-card__icon">🔌</span>
                   <h3 className="arduino-pillar-card__title">UART (Serial)</h3>
